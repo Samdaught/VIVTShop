@@ -1,24 +1,50 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ClothingPage from './pages/ClothingPage';
+import CheckoutPage from './pages/CheckoutPage';
+import { CartProvider } from './context/CartContext';
+import Cart from './components/Cart';
+import Notification from './components/Notification';
 import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
+  const [notifications, setNotifications] = useState([]);
+
+  const showNotification = (message) => {
+    const id = Date.now();
+    setNotifications((prevNotifications) => [...prevNotifications, { id, message }]);
+
+    setTimeout(() => {
+      setNotifications((prevNotifications) =>
+        prevNotifications.filter((notification) => notification.id !== id),
+      );
+    }, 3000); // Уведомление будет видно 3 секунды
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      <Router>
+        <div class="container">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage showNotification={showNotification} />} />
+            <Route
+              path="/clothing"
+              element={<ClothingPage showNotification={showNotification} />}
+            />
+            <Route path="/cart" element={<Cart showNotification={showNotification} />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+          </Routes>
+          <div className="notifications-container">
+            {notifications.map((notification) => (
+              <Notification key={notification.id} message={notification.message} />
+            ))}
+          </div>
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 
