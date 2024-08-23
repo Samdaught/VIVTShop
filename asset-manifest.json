@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/VIVTShop/static/css/main.f40d105f.css",
-    "main.js": "/VIVTShop/static/js/main.c7bbb2ea.js",
+    "main.css": "/VIVTShop/static/css/main.7bec563b.css",
+    "main.js": "/VIVTShop/static/js/main.450d40e3.js",
     "static/js/453.663e9e52.chunk.js": "/VIVTShop/static/js/453.663e9e52.chunk.js",
     "static/media/bracelet_purple_front.png": "/VIVTShop/static/media/bracelet_purple_front.8a46b8d86387d3f8d83a.png",
     "static/media/bracelet_purple_back.png": "/VIVTShop/static/media/bracelet_purple_back.ead9edbfc06799a50811.png",
     "static/media/cup_blue.png": "/VIVTShop/static/media/cup_blue.f227a262c7599f4da01d.png",
     "index.html": "/VIVTShop/index.html",
-    "main.f40d105f.css.map": "/VIVTShop/static/css/main.f40d105f.css.map",
-    "main.c7bbb2ea.js.map": "/VIVTShop/static/js/main.c7bbb2ea.js.map",
+    "main.7bec563b.css.map": "/VIVTShop/static/css/main.7bec563b.css.map",
+    "main.450d40e3.js.map": "/VIVTShop/static/js/main.450d40e3.js.map",
     "453.663e9e52.chunk.js.map": "/VIVTShop/static/js/453.663e9e52.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f40d105f.css",
-    "static/js/main.c7bbb2ea.js"
+    "static/css/main.7bec563b.css",
+    "static/js/main.450d40e3.js"
   ]
 }
