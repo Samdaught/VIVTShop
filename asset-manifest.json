@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/VIVTShop/static/css/main.0fb99fa1.css",
+    "main.js": "/VIVTShop/static/js/main.df97a5d1.js",
+    "static/js/453.663e9e52.chunk.js": "/VIVTShop/static/js/453.663e9e52.chunk.js",
+    "static/media/bracelet_purple_front.png": "/VIVTShop/static/media/bracelet_purple_front.8a46b8d86387d3f8d83a.png",
+    "static/media/bracelet_purple_back.png": "/VIVTShop/static/media/bracelet_purple_back.ead9edbfc06799a50811.png",
+    "static/media/cup_blue.png": "/VIVTShop/static/media/cup_blue.f227a262c7599f4da01d.png",
+    "index.html": "/VIVTShop/index.html",
+    "main.0fb99fa1.css.map": "/VIVTShop/static/css/main.0fb99fa1.css.map",
+    "main.df97a5d1.js.map": "/VIVTShop/static/js/main.df97a5d1.js.map",
+    "453.663e9e52.chunk.js.map": "/VIVTShop/static/js/453.663e9e52.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fb99fa1.css",
+    "static/js/main.df97a5d1.js"
+  ]
+}
