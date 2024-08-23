@@ -1,5 +1,5 @@
 import React from 'react';
-import './Notification.css'; // Подключаем стили
+import '../css/Notification.css';
 
 function Notification({ message, isVisible }) {
   return <div className={`notification ${isVisible ? 'visible' : ''}`}>{message}</div>;

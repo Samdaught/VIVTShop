@@ -1,0 +1,34 @@
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.banner {
+  position: relative;
+  z-index: 0;
+}
+
+.banner-new-collection {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.blue-cup {
+  position: absolute;
+  bottom: -50px;
+  left: -150px;
+  rotate: -10deg;
+
+  max-width: 350px;
+}
+
+.bracelet {
+  position: absolute;
+  top: -58px;
+  right: -70px;
+
+  max-width: 350px;
+}
+
+.back {
+  z-index: -1;
+}

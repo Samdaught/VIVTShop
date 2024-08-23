@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ClothingPage from './pages/ClothingPage';
+import OfficePage from './pages/OfficePage';
 import CheckoutPage from './pages/CheckoutPage';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart';
 import Notification from './components/Notification';
 import './App.css';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   const [notifications, setNotifications] = useState([]);
@@ -20,7 +22,7 @@ function App() {
       setNotifications((prevNotifications) =>
         prevNotifications.filter((notification) => notification.id !== id),
       );
-    }, 3000); // Уведомление будет видно 3 секунды
+    }, 3000);
   };
 
   return (
@@ -28,12 +30,15 @@ function App() {
       <Router>
         <div class="container">
           <Navbar />
+        </div>
+        <div class="container">
           <Routes>
             <Route path="/" element={<HomePage showNotification={showNotification} />} />
             <Route
               path="/clothing"
               element={<ClothingPage showNotification={showNotification} />}
             />
+            <Route path="/office" element={<OfficePage showNotification={showNotification} />} />
             <Route path="/cart" element={<Cart showNotification={showNotification} />} />
             <Route path="/checkout" element={<CheckoutPage />} />
           </Routes>
@@ -43,6 +48,7 @@ function App() {
             ))}
           </div>
         </div>
+        <Footer />
       </Router>
     </CartProvider>
   );

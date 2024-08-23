@@ -12,12 +12,12 @@ function Cart({ showNotification }) {
 
   return (
     <div>
-      <h2>Корзина</h2>
+      <h1>Корзина</h1>
       {cartItems.length === 0 ? (
         <p>Корзина пуста</p>
       ) : (
         <div>
-          <ul>
+          <ul class="cart-list">
             {cartItems.map((item) => (
               <li key={item.id}>
                 {item.name} - {item.price} руб.

@@ -1,18 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
     <nav>
+      <p>VIVT-Store</p>
       <ul>
         <li>
-          <Link to="/">Главная</Link>
+          <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Главная
+          </NavLink>
         </li>
         <li>
-          <Link to="/clothing">Одежда</Link>
+          <NavLink to="/clothing" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Одежда
+          </NavLink>
         </li>
         <li>
-          <Link to="/cart">Корзина</Link>
+          <NavLink to="/office" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Канцелярия
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/cart" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Корзина
+          </NavLink>
         </li>
       </ul>
     </nav>

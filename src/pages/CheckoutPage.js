@@ -8,7 +8,7 @@ function CheckoutPage() {
 
   return (
     <div>
-      <h2>Оформление заказа</h2>
+      <h1>Оформление заказа</h1>
       {cartItems.length === 0 ? (
         <p>Ваша корзина пуста</p>
       ) : (
