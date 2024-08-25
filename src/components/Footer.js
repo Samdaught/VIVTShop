@@ -4,7 +4,7 @@ import '../css/footer.css';
 function Footer() {
   return (
     <footer>
-      <div class="socials-container">
+      <div className="socials-container">
         <a
           data-social="vivt.ru"
           style={{ '--social-color': '#8c39ff' }}

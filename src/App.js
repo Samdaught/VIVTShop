@@ -1,5 +1,6 @@
+import './App.css';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ClothingPage from './pages/ClothingPage';
 import OfficePage from './pages/OfficePage';
@@ -7,9 +8,9 @@ import CheckoutPage from './pages/CheckoutPage';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart';
 import Notification from './components/Notification';
-import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import TestPage from './pages/TestPage';
 
 function App() {
   const [notifications, setNotifications] = useState([]);
@@ -28,10 +29,8 @@ function App() {
   return (
     <CartProvider>
       <Router>
-        <div class="container">
-          <Navbar />
-        </div>
-        <div class="container">
+        <Navbar />
+        <div className="container">
           <Routes>
             <Route path="/" element={<HomePage showNotification={showNotification} />} />
             <Route
@@ -41,6 +40,7 @@ function App() {
             <Route path="/office" element={<OfficePage showNotification={showNotification} />} />
             <Route path="/cart" element={<Cart showNotification={showNotification} />} />
             <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/test" element={<TestPage setNotifications={showNotification} />} />
           </Routes>
           <div className="notifications-container">
             {notifications.map((notification) => (

@@ -1,9 +1,8 @@
-import React from 'react';
 import '../css/Photosets.css';
 
-function Photosets() {
+const Photosets = () => {
   return (
-    <div>
+    <div className="photoset-container">
       <h2>Наши фотосессии</h2>
       <section className="animated-grid">
         <div className="photoset-card" style={{ '--i': 1, '--g': 'a' }}>
@@ -87,6 +86,6 @@ function Photosets() {
       </section>
     </div>
   );
-}
+};
 
 export default Photosets;

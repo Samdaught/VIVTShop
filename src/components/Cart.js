@@ -17,7 +17,7 @@ function Cart({ showNotification }) {
         <p>Корзина пуста</p>
       ) : (
         <div>
-          <ul class="cart-list">
+          <ul className="cart-list">
             {cartItems.map((item) => (
               <li key={item.id}>
                 {item.name} - {item.price} руб.

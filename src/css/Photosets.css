@@ -2,6 +2,10 @@
   --stagger-delay: 75ms;
 }
 
+.photoset-container {
+  margin-top: 50px;
+}
+
 .animated-grid {
   height: 85vh;
   margin: 50px 0;
